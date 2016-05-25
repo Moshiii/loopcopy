@@ -3,6 +3,11 @@ using UnityEngine.UI;
 using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Advertisements;
+
+
+
 
 public class GameManager : MonoBehaviour
 {
@@ -296,6 +301,9 @@ public class GameManager : MonoBehaviour
 			}
 		}
 		Debug.Log ("ifComplete = " + ifComplete);
+		if (ifComplete) {
+			ShowAd ();
+		}
 		return ifComplete;
 	}
 
@@ -310,5 +318,10 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-
+	public void ShowAd ()
+	{
+		if (Advertisement.IsReady ()) {
+			Advertisement.Show ();
+		}
+	}
 }
