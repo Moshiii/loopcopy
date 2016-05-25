@@ -1,6 +1,8 @@
+D:\UnitySpace\loopcopy\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 D:\UnitySpace\loopcopy\Temp\bin\Debug\Assembly-CSharp.dll
 D:\UnitySpace\loopcopy\Temp\bin\Debug\Assembly-CSharp.pdb
 D:\UnitySpace\loopcopy\Temp\bin\Debug\UnityEditor.dll
+D:\UnitySpace\loopcopy\Temp\bin\Debug\UnityEngine.Advertisements.dll
 D:\UnitySpace\loopcopy\Temp\bin\Debug\UnityEngine.dll
 D:\UnitySpace\loopcopy\Temp\bin\Debug\UnityEngine.Networking.dll
 D:\UnitySpace\loopcopy\Temp\bin\Debug\UnityEngine.UI.dll
@@ -14,8 +16,8 @@ D:\UnitySpace\loopcopy\Temp\bin\Debug\Mono.Cecil.Pdb.dll
 D:\UnitySpace\loopcopy\Temp\bin\Debug\Mono.Cecil.Mdb.dll
 D:\UnitySpace\loopcopy\Temp\bin\Debug\UnityEngine.xml
 D:\UnitySpace\loopcopy\Temp\bin\Debug\UnityEditor.xml
+D:\UnitySpace\loopcopy\Temp\bin\Debug\UnityEngine.Advertisements.xml
 D:\UnitySpace\loopcopy\Temp\bin\Debug\UnityEngine.UI.xml
 D:\UnitySpace\loopcopy\Temp\bin\Debug\UnityEngine.Networking.xml
-D:\UnitySpace\loopcopy\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 D:\UnitySpace\loopcopy\obj\Debug\Assembly-CSharp.dll
 D:\UnitySpace\loopcopy\obj\Debug\Assembly-CSharp.pdb

@@ -11,11 +11,15 @@ using UnityEngine.Advertisements;
 
 public class GameManager : MonoBehaviour
 {
-
+	[SerializeField]
+	private GameObject MainCanvas;
 	[SerializeField]
 	public  Sprite[] Tileskin;
 	public int N_cols;
 	public List<Button> btns = new List<Button> ();
+	//public Button winbtn;
+
+	bool levelCompete = false;
 
 	void Aweak ()
 	{
@@ -38,13 +42,12 @@ public class GameManager : MonoBehaviour
 
 	void GetButtons ()
 	{
+		//GameObject[] winobject = GameObject.FindGameObjectWithTag ("WinBtn");
+		//winbtn = winobject;
 		GameObject[] objects = GameObject.FindGameObjectsWithTag ("PuzzleBtn");
-	
 		for (int i = 0; i < objects.Length; i++) {
 			btns.Add (objects [i].GetComponent<Button> ());
 		}
-
-	
 	}
 
 	void OnMouseDown ()
@@ -54,6 +57,7 @@ public class GameManager : MonoBehaviour
 
 	void AddListeners ()
 	{
+		//winbtn.onClick.AddListener (() => ClickTile ());
 		foreach (Button btn in btns) {
 			
 			btn.onClick.AddListener (() => ClickTile ());
@@ -302,7 +306,8 @@ public class GameManager : MonoBehaviour
 		}
 		Debug.Log ("ifComplete = " + ifComplete);
 		if (ifComplete) {
-			ShowAd ();
+			//ShowAd ();
+			levelCompete = true;
 		}
 		return ifComplete;
 	}
@@ -320,8 +325,27 @@ public class GameManager : MonoBehaviour
 
 	public void ShowAd ()
 	{
-		if (Advertisement.IsReady ()) {
-			Advertisement.Show ();
+		//if (Advertisement.IsReady ()) {Advertisement.Show ();}
+	}
+
+	public void WinPopUp ()
+	{
+		if (GUI.Button (new Rect (10, 10, 150, 50), "Play Again")) {
+			ResetLevel ();
 		}
+
+	}
+
+	public void OnGUI ()
+	{
+		if (levelCompete) {
+			WinPopUp ();
+
+		}
+	}
+
+	public void ResetLevel ()
+	{
+		Application.LoadLevel (Application.loadedLevel);
 	}
 }
