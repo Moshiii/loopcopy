@@ -3,7 +3,6 @@ using UnityEngine.UI;
 using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.Advertisements;
 
 
@@ -61,7 +60,6 @@ public class GameManager : MonoBehaviour
 		foreach (Button btn in btns) {
 			
 			btn.onClick.AddListener (() => ClickTile ());
-			ClassButton btnRef = btn.GetComponent<ClassButton> ();
 			Debug.Log ("updating " + btn.name);
 			//btn.onClick.AddListener (() => UpdateTileSkin ());
 			btn.onClick.AddListener (() => CheckComplete ());
@@ -306,7 +304,7 @@ public class GameManager : MonoBehaviour
 		}
 		Debug.Log ("ifComplete = " + ifComplete);
 		if (ifComplete) {
-			//ShowAd ();
+			ShowAd ();
 			levelCompete = true;
 		}
 		return ifComplete;
@@ -325,7 +323,13 @@ public class GameManager : MonoBehaviour
 
 	public void ShowAd ()
 	{
-		//if (Advertisement.IsReady ()) {Advertisement.Show ();}
+		if (Application.platform == RuntimePlatform.Android) {
+		
+			if (Advertisement.IsReady ()) {
+				Advertisement.Show ();
+			}		
+		}
+			
 	}
 
 	public void WinPopUp ()
@@ -347,5 +351,6 @@ public class GameManager : MonoBehaviour
 	public void ResetLevel ()
 	{
 		Application.LoadLevel (Application.loadedLevel);
+
 	}
 }
