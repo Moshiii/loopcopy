@@ -70,9 +70,8 @@ public class GameManager : MonoBehaviour
 	{
 		GameObject currentSelectedGameObject = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
 
-		string name = currentSelectedGameObject.name;
-		currentSelectedGameObject.GetComponent<ClassButton> ().Rotate ();
 		currentSelectedGameObject.transform.Rotate (Vector3.forward * -90);
+		currentSelectedGameObject.GetComponent<ClassButton> ().Rotate ();
 	}
 
 	void GeneratePuzzle ()
@@ -156,7 +155,7 @@ public class GameManager : MonoBehaviour
 	void PutTileSkin (Button btn, int LinkU, int LinkD, int LinkL, int LinkR)
 	{
 		if (LinkU == 0 && LinkD == 0 && LinkR == 0 && LinkL == 0) {
-			//btn.image.sprite = Tileskin [0];
+			btn.image.sprite = Tileskin [0];
 		} else if (LinkU == 0 && LinkD == 0 && LinkR == 0 && LinkL == 1) {
 			btn.image.sprite = Tileskin [1];
 			btn.transform.Rotate (Vector3.forward * -180);
@@ -323,12 +322,14 @@ public class GameManager : MonoBehaviour
 
 	public void ShowAd ()
 	{
+		/*
 		if (Application.platform == RuntimePlatform.Android) {
 		
 			if (Advertisement.IsReady ()) {
 				Advertisement.Show ();
 			}		
 		}
+		*/
 			
 	}
 

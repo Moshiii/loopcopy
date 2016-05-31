@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: b3debba386a7d224a82ee34fe2137e36
-timeCreated: 1464579746
+guid: 4c9f2a47a59602649bb5e12cba19dbb1
+timeCreated: 1464736675
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -8,9 +8,7 @@ TextureImporter:
     21300002: 3
     21300004: 2
     21300006: 1
-    21300008: 0
-    21300010: 2b
-    21300012: Null_tile
+    21300008: 2b
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -33,10 +31,10 @@ TextureImporter:
   cubemapConvolutionSteps: 7
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -3
-  maxTextureSize: 1024
+  textureFormat: -1
+  maxTextureSize: 2048
   textureSettings:
-    filterMode: 0
+    filterMode: -1
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -51,7 +49,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 10
+  spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
@@ -61,79 +59,88 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 25
-        width: 7
-        height: 7
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -7, y: 32}
+        - {x: -32, y: 7}
+        - {x: -32, y: -7}
+        - {x: -7, y: -32}
+        - {x: 7, y: -32}
+        - {x: 32, y: -7}
+        - {x: 32, y: 7}
+        - {x: 7, y: 32}
     - name: 3
       rect:
         serializedVersion: 2
-        x: 8
-        y: 25
-        width: 7
-        height: 7
+        x: 64
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -7, y: 32}
+        - {x: -32, y: 7}
+        - {x: -32, y: -7}
+        - {x: 32, y: -7}
+        - {x: 32, y: 7}
+        - {x: 7, y: 32}
     - name: 2
       rect:
         serializedVersion: 2
-        x: 16
-        y: 25
-        width: 7
-        height: 7
+        x: 128
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -7, y: 32}
+        - {x: -7, y: -5}
+        - {x: -5, y: -7}
+        - {x: 32, y: -7}
+        - {x: 32, y: 7}
+        - {x: 7, y: 32}
     - name: 1
       rect:
         serializedVersion: 2
-        x: 24
-        y: 25
-        width: 7
-        height: 7
+        x: 192
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: 0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 17
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -23, y: 23}
+        - {x: -23, y: -21}
+        - {x: -21, y: -23}
+        - {x: 24, y: -23}
+        - {x: 32, y: -12}
+        - {x: 32, y: 8}
+        - {x: 26, y: 23}
     - name: 2b
       rect:
         serializedVersion: 2
-        x: 8
-        y: 17
-        width: 7
-        height: 7
+        x: 256
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: Null_tile
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 17
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -32, y: -7}
+        - {x: 32, y: -7}
+        - {x: 32, y: 7}
+        - {x: -32, y: 7}
     outline: []
   spritePackingTag: 
   userData: 

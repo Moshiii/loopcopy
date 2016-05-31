@@ -10,14 +10,17 @@ public class AddBtn : MonoBehaviour
 	private Transform TileField;
 	[SerializeField]
 	private GameObject btn;
+	public int N_tiles;
+
 
 	// Use this for initialization
 	void Awake ()
 	{
 
 		int N_cols = TileField.GetComponent<GridLayoutGroup> ().constraintCount;
+
 		//Debug.Log ("Number of colums" + N_cols);
-		for (int i = 0; i < 25; i++) {
+		for (int i = 0; i < N_tiles; i++) {
 			GameObject button = Instantiate (btn);
 			//tile_row_col
 			button.name = "tile_" + i / N_cols + "_" + i % N_cols;
