@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
 	private GameObject MainCanvas;
 	[SerializeField]
 	public  Sprite[] Tileskin;
-	public int N_cols;
 	public List<Button> btns = new List<Button> ();
 	//public Button winbtn;
 
@@ -77,12 +76,15 @@ public class GameManager : MonoBehaviour
 	void GeneratePuzzle ()
 	{
 		AddCompleteGraph ();
+
 		for (int i = 0; i < 50; i++) {
 			RemoveRandomEdges ();
 		}
+
 		for (int i = 0; i < 100; i++) {
 			RotateRandomNodes ();
 		}
+
 		UpdateTileSkin ();
 
 	}

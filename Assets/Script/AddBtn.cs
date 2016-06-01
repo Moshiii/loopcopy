@@ -36,7 +36,7 @@ public class AddBtn : MonoBehaviour
 					button.GetComponent<ClassButton> ().PositionState = ClassButton.EDGE_U;
 				}
 
-			} else if (i / N_cols == N_cols - 1) {
+			} else if (i / N_cols == N_cols - 1 - (N_cols - N_tiles / N_cols)) {
 
 				if (i % N_cols == 0) {
 					button.GetComponent<ClassButton> ().PositionState = ClassButton.CONER_DL;
